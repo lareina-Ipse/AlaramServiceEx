@@ -14,10 +14,8 @@ public class AlarmReceiver extends BroadcastReceiver {
 
         // Oreo 버전 이후부터는 Background에서 실행을 금지하기 때문에 Foreground에서 실행해야 한다.
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-
             context.startForegroundService(sIntent);
         } else {
-
             context.startService(sIntent);
         }
 
